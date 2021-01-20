@@ -282,12 +282,12 @@ AnimatorStateMachine:
   - {fileID: -1382422238924495075}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -4686517788337047340}
-    second:
-    - {fileID: -6779714921910057308}
   - first: {fileID: -5807484604265192657}
     second:
     - {fileID: -2749615630303835676}
+  - first: {fileID: -4686517788337047340}
+    second:
+    - {fileID: -6779714921910057308}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 280, y: -40, z: 0}
   m_EntryPosition: {x: -200, y: 110, z: 0}
@@ -1625,5 +1625,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe89230b35f36b4abb22cd908be3130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderDePie: {fileID: 0}
-  colliderAgachado: {fileID: 0}
+  rodar: 8

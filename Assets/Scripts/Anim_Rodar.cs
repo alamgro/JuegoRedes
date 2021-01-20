@@ -10,6 +10,7 @@ public class Anim_Rodar : StateMachineBehaviour
     private Rigidbody rb;
     private Vector3 vel;
     private CapsuleCollider colliderDePie;
+    public float rodar ;
 
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -35,7 +36,7 @@ public class Anim_Rodar : StateMachineBehaviour
                 //INTERCAMBIAR COLLIDER - "DE PIE" A "AGACHADO"
                 colliderDePie.isTrigger = true;
 
-                vel = Vector3.forward * 5f; //Velocidad hacia adelante
+                vel = Vector3.forward * rodar; //Velocidad hacia adelante
                 vel = personaje.transform.worldToLocalMatrix.inverse * vel; //Se asegura que el vector sea hacia en frente con respecto al jugador
             }
         }
