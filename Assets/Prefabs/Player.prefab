@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96e2f5cc36cb454a93f4005c10587b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadCaminando: 4
-  velocidadSprint: 8
+  velocidadCaminando: 7
+  velocidadSprint: 16
   velocidadGiro: 180
-  fuerzaSalto: 5
+  fuerzaSalto: 6
   anim: {fileID: 8434513352601834955}
   posPies: {fileID: 8385202180517018378}
   puedeMoverse: 0
