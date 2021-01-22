@@ -38,7 +38,6 @@ public class Personaje : MonoBehaviour
 
         if (puedeMoverse)
         {
-            Movimiento();
             Rotacion();
             CheckSprint();
             Salto();
@@ -48,11 +47,15 @@ public class Personaje : MonoBehaviour
         Sentarse();
 
         rb.velocity = vel; //Actualizamos la velocidad del rigidbody
-    
-
     }
-
-void Movimiento()
+    private void FixedUpdate()
+    {
+        if (puedeMoverse)
+        {
+            Movimiento();
+        }
+    }
+    void Movimiento()
     {
         velHorizontal = Input.GetAxisRaw("Horizontal");
         velVertical = Input.GetAxisRaw("Vertical");
@@ -67,8 +70,7 @@ void Movimiento()
         {
             anim.SetBool("Moviendose", true);
         }
-
-        rb.MovePosition(transform.position + (direccion * velocidad) * Time.deltaTime); //mueve al jugador
+        rb.MovePosition(transform.position + (direccion * velocidad) * Time.fixedDeltaTime); //mueve al jugador, el fixedDelta es agregado si usamos la funcion FixedUpdate
     }
 
     void Rotacion() //Rotar sobre sí mismo
@@ -76,7 +78,6 @@ void Movimiento()
         if (Input.GetKey(KeyCode.Q))
         {
             transform.Rotate(Vector3.down * velocidadGiro * Time.deltaTime);
-
         }
         if (Input.GetKey(KeyCode.Q))
         {
