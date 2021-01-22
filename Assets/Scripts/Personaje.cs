@@ -8,6 +8,8 @@ public class Personaje : MonoBehaviour
     public float velocidadSprint;
     public float velocidadGiro;
     public float fuerzaSalto;
+
+
     public Animator anim;
     public Transform posPies;
     [HideInInspector]
@@ -46,9 +48,11 @@ public class Personaje : MonoBehaviour
         Sentarse();
 
         rb.velocity = vel; //Actualizamos la velocidad del rigidbody
+    
+
     }
 
-    void Movimiento()
+void Movimiento()
     {
         velHorizontal = Input.GetAxisRaw("Horizontal");
         velVertical = Input.GetAxisRaw("Vertical");
@@ -72,6 +76,12 @@ public class Personaje : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
         {
             transform.Rotate(Vector3.down * velocidadGiro * Time.deltaTime);
+
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+        transform.Rotate(Vector3.down * velocidadGiro * Time.deltaTime);
+
         }
         if (Input.GetKey(KeyCode.E))
         {

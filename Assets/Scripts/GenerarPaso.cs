@@ -31,6 +31,9 @@ public class GenerarPaso : MonoBehaviour
         }
         Instantiate(plataformasFinal, new Vector3(0f, 0f, ejeZ), Quaternion.identity); //Lo instanciamoss
 
+     
+
+
     }
 
     // Update is called once per frame
